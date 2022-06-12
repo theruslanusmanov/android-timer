@@ -48,7 +48,12 @@ fun Input() {
 
 @Composable
 fun Timer() {
-    Column(Modifier.padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(
+        Modifier
+            .padding(8.dp)
+            .fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         MessageCard("10:33")
         Spacer(modifier = Modifier.height(4.dp))
         Input()
@@ -58,5 +63,5 @@ fun Timer() {
 @Preview(showBackground = true)
 @Composable
 fun Preview() {
-    Timer();
+    Timer()
 }
